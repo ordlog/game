@@ -9,6 +9,8 @@
         <canvas id="tutorial" width="1000" height="1000"></canvas>
         <script>
             var canvas = document.getElementsByTagName('canvas')[0];
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
             var ctx = canvas.getContext('2d');
             ctx.fillRect(0,0,canvas.width, canvas.height);
             var radius = 1;
