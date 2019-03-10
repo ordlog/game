@@ -1,1 +1,28 @@
-<h1> Hello, World!</h1>
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <!-- Тег meta для указания кодировки -->
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <canvas id="tutorial" width="500" height="500"></canvas>
+        <script>
+            var canvas = document.getElementsByTagName('canvas')[0];
+            var ctx = canvas.getContext('2d');
+            ctx.fillRect(0,0,canvas.width, canvas.height);
+            var radius = 1;
+            var color = 1;
+
+            function draw() {
+                ctx.fillStyle = 'hsl(' + color++ + ',100%,50%)';
+                ctx.beginPath();
+                radius = 0.1*canvas.width*(0.5+Math.random())/1.5;
+                ctx.arc(canvas.width*Math.random(),canvas.height*Math.random(),radius, 0, 2*Math.PI, false);
+                ctx.fill();
+                requestAnimationFrame(draw);
+            }
+            draw();
+            
+        </script>
+    </body>
+</html>
