@@ -25,7 +25,7 @@
                 x = canvas.width*Math.random();
                 y = canvas.height*Math.random();
                 x = max(min(x,canvas.width-radius), radius);
-                y = max(min(y,canvas.width-radius), radius);
+                y = max(min(y,canvas.height-radius), radius);
                 ctx.arc(x,y,radius, 0, 2*Math.PI, false);
                 ctx.fill();
                 //requestAnimationFrame(draw);
