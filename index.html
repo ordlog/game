@@ -22,7 +22,11 @@
                 ctx.fillStyle = 'hsl(' + color++ + ',100%,50%)';
                 ctx.beginPath();
                 radius = 0.1*canvas.width*(0.5+Math.random())/1.5;
-                ctx.arc(canvas.width*Math.random(),canvas.height*Math.random(),radius, 0, 2*Math.PI, false);
+                x = canvas.width*Math.random();
+                y = canvas.height*Math.random();
+                x = max(min(x,canvas.width-radius), radius);
+                y = max(min(y,canvas.width-radius), radius);
+                ctx.arc(x,y,radius, 0, 2*Math.PI, false);
                 ctx.fill();
                 //requestAnimationFrame(draw);
                 setTimeout(draw, 1000);
