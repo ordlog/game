@@ -16,6 +16,8 @@
             var color = 1;
 
             function draw() {
+                ctx.fillStyle = 'black';
+                ctx.strokeStyle = 'black';
                 ctx.fillRect(0,0,canvas.width, canvas.height);
                 ctx.fillStyle = 'hsl(' + color++ + ',100%,50%)';
                 ctx.beginPath();
