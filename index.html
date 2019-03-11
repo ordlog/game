@@ -24,7 +24,8 @@
                 radius = 0.1*canvas.width*(0.5+Math.random())/1.5;
                 ctx.arc(canvas.width*Math.random(),canvas.height*Math.random(),radius, 0, 2*Math.PI, false);
                 ctx.fill();
-                requestAnimationFrame(draw);
+                //requestAnimationFrame(draw);
+                setTimeout(draw, 1000);
             }
             draw();
             
