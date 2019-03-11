@@ -16,6 +16,7 @@
             var color = 1;
 
             function draw() {
+                ctx.fillRect(0,0,canvas.width, canvas.height);
                 ctx.fillStyle = 'hsl(' + color++ + ',100%,50%)';
                 ctx.beginPath();
                 radius = 0.1*canvas.width*(0.5+Math.random())/1.5;
