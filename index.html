@@ -1,39 +1,8 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
     <head>
-        <!-- Тег meta для указания кодировки -->
-        <meta charset="utf-8">
+        <title>Physics</title>
+        <script type="text/javascript" src="script.js"></script>
     </head>
-    <body>
-        <p>Ну чё лошки, в пабг?</p></br>
-        <canvas id="tutorial" width="1000" height="1000"></canvas>
-        <script>
-            var canvas = document.getElementsByTagName('canvas')[0];
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-            var ctx = canvas.getContext('2d');
-            ctx.fillRect(0,0,canvas.width, canvas.height);
-            var color = 1;
-
-            function draw() {
-                ctx.fillStyle = 'white';
-                ctx.strokeStyle = 'white';
-                ctx.fillRect(0,0,canvas.width, canvas.height);
-                ctx.fillStyle = 'hsl(' + color++ + ',100%,50%)';
-                ctx.beginPath();
-                radius = 0.1*canvas.width*(0.5+Math.random())/1.5;
-                x = canvas.width*Math.random();
-                y = canvas.height*Math.random();
-                x = max(min(x,canvas.width-2*radius), 2*radius);
-                y = max(min(y,canvas.height-2*radius), 2*radius);
-                ctx.arc(x,y,radius, 0, 2*Math.PI, false);
-                ctx.fill();
-                
-                //requestAnimationFrame(draw);
-                setTimeout(draw, 1000);
-            }
-            draw();
-            
-        </script>
-    </body>
+    <body></body>
 </html>
